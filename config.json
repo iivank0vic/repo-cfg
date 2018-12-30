@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "servername",
+    "environment": "development",
+    "subscriptions": [
+      "default"
+    ]
+  }
+  "redis": {
+    "host": "hostname",
+    "port": 6379,
+    "password": "password"
+  }
+  "transport": {
+    "name": "redis",
+    "reconnect_on_error": true
+  }
+}
