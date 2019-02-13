@@ -1,4 +1,7 @@
-/var/sentora/logs/domains/*/*.log /var/sentora/logs/*.log {
+/var/sentora/logs/domains/*/*.log 
+/var/sentora/logs/*/*.log
+/var/sentora/logs/*.log 
+{
     su apache apache
     create 640 apache apache
     daily
@@ -10,3 +13,5 @@
     sharedscripts
     copytruncate
 }
+
+
