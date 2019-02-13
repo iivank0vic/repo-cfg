@@ -1,4 +1,4 @@
-/var/sentora/logs/domains/*/*access.log /var/sentora/logs/domains/*/*error.log /var/sentora/logs/zpanel.log /var/sentora/logs/sentora*.log /var/sentora/logs/daemon*.log {
+/var/sentora/logs/domains/*/*.log /var/sentora/logs/*.log {
     su apache apache
     create 640 apache apache
     daily
