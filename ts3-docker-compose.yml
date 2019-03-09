@@ -24,7 +24,7 @@ services:
       - 8443:8087
     volumes:
       - ./data/scripts:/opt/sinusbot/scripts
-      - ./data:/opt/sinusbot/data
+      - ./data/sinusbot:/opt/sinusbot/data
     networks:
      - mynetwork
 networks:
