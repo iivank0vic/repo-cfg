@@ -1,0 +1,32 @@
+version: '3'
+services:
+  teamspeak:
+    container_name: ts3
+    image: teamspeak
+    restart: always
+    ports:
+      - 9987:9987/udp
+      - 10011:10011
+      - 30033:30033
+    volumes:
+     - ./data/ts3:/var/ts3server/
+    environment:
+      TS3SERVER_LICENSE: accept
+    networks:
+      mynetwork:
+        aliases:
+          - teamspeak.docker.local
+  sinusbot:
+    container_name: sinusbot
+    image: sinusbot/docker
+    restart: always
+    ports:
+      - 8443:8087
+    volumes:
+      - ./data/scripts:/opt/sinusbot/scripts
+      - ./data:/opt/sinusbot/data
+    networks:
+     - mynetwork
+networks:
+    mynetwork:
+        driver: bridge
