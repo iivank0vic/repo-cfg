@@ -1,6 +1,7 @@
 {
   "client": {
     "name": "hostname",
+    "address": "8.8.8.8",
     "environment": "development",
     "subscriptions": [
       "default"
